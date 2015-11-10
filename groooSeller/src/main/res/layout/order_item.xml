@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cn.grooo.seller.grooo_seller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true" >
+
+    <com.andexert.expandablelayout.library.ExpandableLayoutItem
+        xmlns:expandable="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/order_item_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandable:el_contentLayout="@layout/order_item_content"
+        expandable:el_headerLayout="@layout/order_item_header" />
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff75a6ff</color>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/cardview/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <color name="cardview_dark_background">#FF202020</color>
+    <color name="cardview_light_background">#FFFAFAFA</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="translucence">#ff4e4752</color>
+    <color name="white">#ffffffff</color>
+    <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/></declare-styleable>
+    <declare-styleable name="ExpandableLayout"><attr format="reference" name="el_headerLayout"/><attr format="reference" name="el_contentLayout"/><attr format="integer" name="el_duration"/></declare-styleable>
+    <declare-styleable name="SlidingMenu"><attr name="mode"><enum name="left" value="0"/><enum name="right" value="1"/></attr><attr format="reference" name="viewAbove"/><attr format="reference" name="viewBehind"/><attr format="dimension" name="behindOffset"/><attr format="dimension" name="behindWidth"/><attr format="float" name="behindScrollScale"/><attr name="touchModeAbove"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/></attr><attr name="touchModeBehind"><enum name="margin" value="0"/><enum name="fullscreen" value="1"/></attr><attr format="reference" name="shadowDrawable"/><attr format="dimension" name="shadowWidth"/><attr format="boolean" name="fadeEnabled"/><attr format="float" name="fadeDegree"/><attr format="boolean" name="selectorEnabled"/><attr format="reference" name="selectorDrawable"/></declare-styleable>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">50dp</dimen>
+    <dimen name="activity_vertical_margin">50dp</dimen>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/cardview/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="dialog_padding">30dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">30dp</dimen>
+    <dimen name="slidingmenu_offset">120dp</dimen>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/slidingmenu_library/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <item name="selected_view" type="id"/>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="tag_first" type="id"/>
+    <item name="tag_fourth" type="id"/>
+    <item name="tag_second" type="id"/>
+    <item name="tag_third" type="id"/>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">咕噜卖家</string>
+    <string name="clear_log">清除日志</string>
+    <string name="custom_text_hint">用户自定义行为打开的Activity</string>
+    <string name="log_tip">日志：</string>
+    <string name="login">登录</string>
+    <string name="media">Rich Media</string>
+    <string name="menu_manage">菜品管理</string>
+    <string name="order_all">订单中心</string>
+    <string name="order_today">今日订单</string>
+    <string name="shop_manage">餐厅管理</string>
+    <string name="tags_hint">请输入多个标签，以英文逗号隔开</string>
+    <string name="text_btn_delTags">删除标签</string>
+    <string name="text_btn_init">百度账号绑定</string>
+    <string name="text_btn_init1">更换百度账号</string>
+    <string name="text_btn_initAK">无账号绑定</string>
+    <string name="text_btn_rich">富媒体消息</string>
+    <string name="text_btn_senior">高级功能</string>
+    <string name="text_btn_set">设置</string>
+    <string name="text_btn_setTags">设置标签</string>
+    <string name="text_media_title">富媒体消息列表</string>
+    <!-- From: file:/home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/cardview/unspecified/res/values/values.xml -->
+    <eat-comment/>
+    <style name="CardView">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+</resources>
