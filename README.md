@@ -1,4 +1,3 @@
-groooseller_android
-===================
+grooo_seller_Android
+====================
 
-咕噜卖家的安卓客户端
