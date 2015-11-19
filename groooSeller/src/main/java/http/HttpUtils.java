@@ -56,7 +56,7 @@ public class HttpUtils {
 	public static int getVersionCode(Context context) {
 		int versionCode = 0;
 		try {
-			// »ñÈ¡Èí¼þ°æ±¾ºÅ£¬
+			// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½æ±¾ï¿½Å£ï¿½
 			versionCode = context.getPackageManager().getPackageInfo(
 					context.getPackageName(), 0).versionCode;
 		} catch (NameNotFoundException e) {
@@ -66,15 +66,12 @@ public class HttpUtils {
 	}
 
 	public static boolean isConnect(Context context) {
-		// »ñÈ¡ÊÖ»úËùÓÐÁ¬½Ó¹ÜÀí¶ÔÏó£¨°üÀ¨¶Ôwi-fi,netµÈÁ¬½ÓµÄ¹ÜÀí£©
 		try {
 			ConnectivityManager connectivity = (ConnectivityManager) context
 					.getSystemService(Context.CONNECTIVITY_SERVICE);
 			if (connectivity != null) {
-				// »ñÈ¡ÍøÂçÁ¬½Ó¹ÜÀíµÄ¶ÔÏó
 				NetworkInfo info = connectivity.getActiveNetworkInfo();
 				if (info != null && info.isConnected()) {
-					// ÅÐ¶Ïµ±Ç°ÍøÂçÊÇ·ñÒÑ¾­Á¬½Ó
 					if (info.getState() == NetworkInfo.State.CONNECTED) {
 						return true;
 					}
@@ -119,7 +116,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+
 				HttpPost httppost = new HttpPost(SellerApplication.url);
 				try {
 					// parameters of HTTP request
@@ -306,7 +303,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.url);
 				try {
 					// parameters of HTTP request
@@ -396,7 +393,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/getmenu/");
 				try {
@@ -457,7 +454,7 @@ public class HttpUtils {
 	// @Override
 	// public void run() {
 	// String sResponse = null;
-	// // Òª´«µÝµÄ²ÎÊý.
+	// // Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 	// HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 	// + SellerApplication.shopId + "/info/pushmenu/");
 	// try {
@@ -536,7 +533,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/menu/food/add/");
 				try {
@@ -595,7 +592,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/menu/food/mod/");
 				try {
@@ -654,7 +651,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/menu/food/del/");
 				try {
@@ -713,7 +710,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/menu/class/del/");
 				try {
@@ -772,7 +769,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/menu/class/ren/");
 				try {
@@ -827,7 +824,7 @@ public class HttpUtils {
 			public void run() {
 				String sResponse = null;
 
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/order/" + id
 						+ "/finish/");
@@ -868,7 +865,7 @@ public class HttpUtils {
 			public void run() {
 				String sResponse = null;
 
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/order/" + id
 						+ "/finish/");
@@ -907,7 +904,7 @@ public class HttpUtils {
 			public void run() {
 				String sResponse = null;
 
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/order/" + id
 						+ "/cancel/");
@@ -951,7 +948,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/start/");
 				try {
@@ -998,7 +995,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/end/");
 				try {
@@ -1049,7 +1046,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/setAnnouncement/");
 				try {
@@ -1089,7 +1086,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/getAnnouncement/");
 				try {
@@ -1132,7 +1129,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/setDescription/");
 				try {
@@ -1172,7 +1169,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/getDescription/");
 				try {
@@ -1217,7 +1214,7 @@ public class HttpUtils {
 			@Override
 			public void run() {
 				String sResponse = null;
-				// Òª´«µÝµÄ²ÎÊý.
+				// Òªï¿½ï¿½ï¿½ÝµÄ²ï¿½ï¿½ï¿½.
 				HttpPost httppost = new HttpPost(SellerApplication.urlNormal
 						+ SellerApplication.shopId + "/info/changePassword/");
 				try {

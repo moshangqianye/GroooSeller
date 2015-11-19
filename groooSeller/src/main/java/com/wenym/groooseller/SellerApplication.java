@@ -18,12 +18,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.testin.agent.TestinAgent;
 import com.wenym.groooseller.utils.Toasts;
 
-/*
- * 如果您的工程中实现了Application的继承类，那么，您需要将父类改为com.baidu.frontia.FrontiaApplication。
- * 如果您没有实现Application的继承类，那么，请在AndroidManifest.xml的Application标签中增加属性： 
- * <application android:name="com.baidu.frontia.FrontiaApplication"
- * 。。。
- */
 public class SellerApplication extends Application {
 
 	public static String username, password;
@@ -63,7 +57,7 @@ public class SellerApplication extends Application {
 		HttpUtils.init();
 		ct = getApplicationContext();
 
-		// 以下是您原先的代码实现，保持不变
+		// 锟斤拷锟斤拷锟斤拷锟斤拷原锟饺的达拷锟斤拷实锟街ｏ拷锟斤拷锟街诧拷锟斤拷
 		options = new DisplayImageOptions.Builder()
 				.showStubImage(R.drawable.push)
 				.showImageOnFail(R.drawable.push).cacheInMemory(true)

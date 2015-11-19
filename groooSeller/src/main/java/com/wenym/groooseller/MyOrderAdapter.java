@@ -72,31 +72,10 @@ public class MyOrderAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
-
 		viewHolder holder = null;
 		if (convertView == null) {
-			holder = new viewHolder();
 			convertView = layoutInflater.inflate(R.layout.order_item, null);
-			holder.item = (ExpandableLayoutItem) convertView
-					.findViewById(R.id.order_item_order);
-			holder.remark = (TextView) holder.item
-					.findViewById(R.id.order_remark);
-			holder.method = (TextView) holder.item
-					.findViewById(R.id.order_method);
-			holder.orderNumber = (TextView) holder.item
-					.findViewById(R.id.order_status);
-			holder.orderPrice = (TextView) holder.item
-					.findViewById(R.id.price_all);
-			holder.orderTime = (TextView) holder.item
-					.findViewById(R.id.order_time);
-			holder.foodList = (LinearLayout) holder.item
-					.findViewById(R.id.food_list);
-			holder.address = (TextView) holder.item
-					.findViewById(R.id.order_address);
-			holder.phoneNumber = (TextView) holder.item
-					.findViewById(R.id.order_phone);
-			holder.linearLayout = (LinearLayout) holder.item
-					.findViewById(R.id.status_color);
+			holder = new viewHolder(convertView);
 			convertView.setTag(holder);
 		} else {
 			holder = (viewHolder) convertView.getTag();
@@ -113,31 +92,31 @@ public class MyOrderAdapter extends BaseAdapter {
 		});
 		switch (Integer.parseInt(tempOrder.status)) {
 		case 0:
-			holder.orderNumber.setText("Î´½Óµ¥-¶©µ¥ºÅ£º" + tempOrder.id);
+			holder.orderNumber.setText("Î´ï¿½Óµï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			holder.linearLayout.setBackgroundColor(Color
 					.parseColor("#FF93BAEA"));
 			break;
 		case 1:
-			if ("×ÔÈ¡".equals(tempOrder.method)) {
-				holder.orderNumber.setText("ÒÑ½Óµ¥-¶©µ¥ºÅ£º" + tempOrder.id);
+			if ("ï¿½ï¿½È¡".equals(tempOrder.method)) {
+				holder.orderNumber.setText("ï¿½Ñ½Óµï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			} else {
-				holder.orderNumber.setText("µÈ´ýÅäËÍ-¶©µ¥ºÅ£º" + tempOrder.id);
+				holder.orderNumber.setText("ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			}
 			holder.linearLayout.setBackgroundColor(Color
 					.parseColor("#FF599737"));
 			break;
 		case 2:
-			holder.orderNumber.setText("ÉêÇëÍËµ¥-¶©µ¥ºÅ£º" + tempOrder.id);
+			holder.orderNumber.setText("ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			holder.linearLayout.setBackgroundColor(Color
 					.parseColor("#FFFF0000"));
 			break;
 		case 3:
-			holder.orderNumber.setText("ÒÑÎÞÐ§-¶©µ¥ºÅ£º" + tempOrder.id);
+			holder.orderNumber.setText("ï¿½ï¿½ï¿½ï¿½Ð§-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			holder.linearLayout.setBackgroundColor(Color
 					.parseColor("#FF787878"));
 			break;
 		case 4:
-			holder.orderNumber.setText("ÒÑÅäËÍ-¶©µ¥ºÅ£º" + tempOrder.id);
+			holder.orderNumber.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½" + tempOrder.id);
 			holder.linearLayout.setBackgroundColor(Color
 					.parseColor("#FF599737"));
 			break;
@@ -145,9 +124,9 @@ public class MyOrderAdapter extends BaseAdapter {
 			break;
 		}
 		holder.orderPrice.setText(tempOrder.price + "Ôª");
-		holder.orderTime.setText("ÏÂµ¥Ê±¼ä£º" + tempOrder.time);
-		holder.address.setText("µØÖ·£º" + tempOrder.address);
-		holder.phoneNumber.setText("µç»°£º" + tempOrder.phoneNumber);
+		holder.orderTime.setText("ï¿½Âµï¿½Ê±ï¿½ä£º" + tempOrder.time);
+		holder.address.setText("ï¿½ï¿½Ö·ï¿½ï¿½" + tempOrder.address);
+		holder.phoneNumber.setText("ï¿½ç»°ï¿½ï¿½" + tempOrder.phoneNumber);
 		holder.foodList.removeAllViews();
 		for (int i = 0; i < tempOrder.orderFood.size() + 1; i++) {
 			LinearLayout ll = null;
@@ -163,16 +142,16 @@ public class MyOrderAdapter extends BaseAdapter {
 				Button button = new Button(mContext);
 				button.setBackgroundResource(R.drawable.button);
 				if (tempOrder.status.equals("0")) {
-					button.setText("½ÓÊÜ¶©µ¥");
+					button.setText("ï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½");
 					button.setOnClickListener(new View.OnClickListener() {
 
 						@Override
 						public void onClick(View v) {
 							new AlertDialog.Builder(mContext)
-									.setTitle("½Óµ¥")
-									.setMessage("È·¶¨Òª½ÓÊÜ¶©µ¥Âð£¿")
+									.setTitle("ï¿½Óµï¿½")
+									.setMessage("È·ï¿½ï¿½Òªï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½ï¿½ï¿½")
 									.setPositiveButton(
-											"È·¶¨",
+											"È·ï¿½ï¿½",
 											new DialogInterface.OnClickListener() {
 
 												@Override
@@ -183,21 +162,21 @@ public class MyOrderAdapter extends BaseAdapter {
 															tempOrder.id,
 															position);
 												}
-											}).setNegativeButton("È¡Ïû", null)
+											}).setNegativeButton("È¡ï¿½ï¿½", null)
 									.show();
 						}
 					});
 				} else if (tempOrder.status.equals("1")) {
-					button.setText("È¡Ïû½ÓÊÜ");
+					button.setText("È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 					button.setOnClickListener(new View.OnClickListener() {
 
 						@Override
 						public void onClick(View v) {
 							new AlertDialog.Builder(mContext)
-									.setTitle("½Óµ¥")
-									.setMessage("È·¶¨Òª½ÓÊÜ¶©µ¥Âð£¿")
+									.setTitle("ï¿½Óµï¿½")
+									.setMessage("È·ï¿½ï¿½Òªï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½ï¿½ï¿½")
 									.setPositiveButton(
-											"È·¶¨",
+											"È·ï¿½ï¿½",
 											new DialogInterface.OnClickListener() {
 
 												@Override
@@ -209,21 +188,21 @@ public class MyOrderAdapter extends BaseAdapter {
 															tempOrder.id,
 															position);
 												}
-											}).setNegativeButton("È¡Ïû", null)
+											}).setNegativeButton("È¡ï¿½ï¿½", null)
 									.show();
 						}
 					});
 				} else if (tempOrder.status.equals("2")) {
-					button.setText("È·ÈÏÍËµ¥");
+					button.setText("È·ï¿½ï¿½ï¿½Ëµï¿½");
 					button.setOnClickListener(new View.OnClickListener() {
 
 						@Override
 						public void onClick(View v) {
 							new AlertDialog.Builder(mContext)
-									.setTitle("½Óµ¥")
-									.setMessage("È·¶¨Òª½ÓÊÜ¶©µ¥Âð£¿")
+									.setTitle("ï¿½Óµï¿½")
+									.setMessage("È·ï¿½ï¿½Òªï¿½ï¿½ï¿½Ü¶ï¿½ï¿½ï¿½ï¿½ï¿½")
 									.setPositiveButton(
-											"È·¶¨",
+											"È·ï¿½ï¿½",
 											new DialogInterface.OnClickListener() {
 
 												@Override
@@ -234,7 +213,7 @@ public class MyOrderAdapter extends BaseAdapter {
 															tempOrder.id,
 															position, mContext);
 												}
-											}).setNegativeButton("È¡Ïû", null)
+											}).setNegativeButton("È¡ï¿½ï¿½", null)
 									.show();
 						}
 					});
@@ -261,6 +240,29 @@ public class MyOrderAdapter extends BaseAdapter {
 				address, method, remark;
 		private LinearLayout linearLayout, foodList;
 
+		public viewHolder(View convertView) {
+
+			item = (ExpandableLayoutItem) convertView
+					.findViewById(R.id.order_item_order);
+			remark = (TextView) item
+					.findViewById(R.id.order_remark);
+			method = (TextView) item
+					.findViewById(R.id.order_method);
+			orderNumber = (TextView) item
+					.findViewById(R.id.order_status);
+			orderPrice = (TextView) item
+					.findViewById(R.id.price_all);
+			orderTime = (TextView) item
+					.findViewById(R.id.order_time);
+			foodList = (LinearLayout) item
+					.findViewById(R.id.food_list);
+			address = (TextView) item
+					.findViewById(R.id.order_address);
+			phoneNumber = (TextView)item
+					.findViewById(R.id.order_phone);
+			linearLayout = (LinearLayout) item
+					.findViewById(R.id.status_color);
+		}
 	}
 
 }
