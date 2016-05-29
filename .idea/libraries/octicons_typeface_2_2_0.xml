@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="octicons-typeface-2.2.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/groooSeller/build/intermediates/exploded-aar/com.mikepenz.iconics/octicons-typeface/2.2.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/groooSeller/build/intermediates/exploded-aar/com.mikepenz.iconics/octicons-typeface/2.2.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz.iconics/octicons-typeface/2.2.0/6b0915ea0342f660c228c5f9ede8a40ff295bd4c/octicons-typeface-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
