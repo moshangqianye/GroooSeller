@@ -1,8 +1,14 @@
 package net.azstudio.groooseller.model.business;
 
 
+import android.databinding.BindingAdapter;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
+import net.azstudio.groooseller.R;
+import net.azstudio.groooseller.provider.OrderStatus;
 import net.azstudio.groooseller.utils.SmallTools;
 
 import java.util.Date;
@@ -27,7 +33,7 @@ public class FoodOrder {
     private String address;
     private String building;
     private String order_id;
-    private Integer price;
+    private String price;
     private Integer rating;
     private String rating_remark;
     private String remark;
@@ -83,11 +89,11 @@ public class FoodOrder {
         this.order_id = order_id;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -119,6 +125,10 @@ public class FoodOrder {
         return status;
     }
 
+    public String getStatusString() {
+        return OrderStatus.getStatus(status);
+    }
+
     public void setStatus(int status) {
         this.status = status;
     }
@@ -140,14 +150,14 @@ public class FoodOrder {
     }
 
     public static class DetailBean {
-        private int count;
+        private String count;
         private String name;
 
-        public int getCount() {
+        public String getCount() {
             return count;
         }
 
-        public void setCount(int count) {
+        public void setCount(String count) {
             this.count = count;
         }
 
@@ -163,6 +173,11 @@ public class FoodOrder {
     @Override
     public String toString() {
         return new Gson().toJson(this);
+    }
+
+    @BindingAdapter("imageUrl")
+    public static void loadImage(ImageView view, String url) {
+        Glide.with(view.getContext()).load(url).placeholder(R.drawable.login_logo).into(view);
     }
 
 }

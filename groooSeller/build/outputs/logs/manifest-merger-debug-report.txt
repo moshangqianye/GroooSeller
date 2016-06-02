@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:2:1-176:12
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:2:1-182:12
 	package
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
@@ -31,7 +31,6 @@ ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/Andr
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:10:22-76
 uses-permission#android.permission.INTERNET
 ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:11:5-67
-MERGED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:12:5-67
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:11:22-64
 uses-permission#android.permission.WAKE_LOCK
@@ -95,16 +94,16 @@ ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/Andr
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:27:22-76
 uses-permission#android.permission.READ_LOGS
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:28:5-68
+	android:name
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:28:22-65
+uses-permission#android.permission.GET_TASKS
 ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:29:5-68
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:29:22-65
-uses-permission#android.permission.GET_TASKS
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:30:5-68
-	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:30:22-65
 application
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:32:5-174:19
-MERGED from [GroooSeller:library:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/library/unspecified/AndroidManifest.xml:11:5-20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:31:5-180:19
+MERGED from [GroooSeller:library:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/library/unspecified/AndroidManifest.xml:11:5-13:41
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
@@ -152,7 +151,8 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:14:5-18:19
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
@@ -203,50 +203,56 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:36:9-41
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:35:9-41
+	android:targetSdkVersion
+		ADDED from [GroooSeller:library:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/library/unspecified/AndroidManifest.xml:13:9-38
 	android:allowBackup
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:34:9-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:33:9-35
 	android:icon
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:35:9-38
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:34:9-38
+	android:minSdkVersion
+		ADDED from [GroooSeller:library:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/library/unspecified/AndroidManifest.xml:12:9-34
 	android:theme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:37:9-40
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:36:9-40
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:33:9-42
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:32:9-42
 activity#net.azstudio.groooseller.ui.activities.LoginActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:38:9-42:49
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:37:9-41:49
 	android:screenOrientation
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:41:13-49
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:40:13-49
 	android:label
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:40:13-45
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:39:13-45
 	android:theme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:42:13-46
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:41:13-46
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:38:13-56
 activity#net.azstudio.groooseller.ui.activities.MainActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:43:9-53:20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:42:9-53:20
 	android:screenOrientation
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:47:13-49
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:46:13-49
 	android:label
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:45:13-45
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:44:13-45
 	android:launchMode
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:46:13-44
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:45:13-44
 	android:theme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:48:13-48
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:47:13-48
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:44:13-55
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:43:13-55
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:49:13-52:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:48:13-52:29
 action#android.intent.action.MAIN
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:50:17-69
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:50:25-66
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
 ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:51:17-77
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:51:27-74
 activity#net.azstudio.groooseller.ui.activities.MenuActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:54:9-56:73
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:54:9-56:64
 	android:label
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:56:13-61
 	android:name
@@ -256,135 +262,141 @@ ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/Andr
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:57:19-71
 activity#net.azstudio.groooseller.ui.activities.ManageActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:58:9-61:20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:58:9-60:64
 	android:label
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:60:13-61
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:59:13-57
+activity#net.azstudio.groooseller.ui.activities.OrderActivity
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:61:9-63:62
+	android:label
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:63:13-59
+	android:name
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:62:13-56
 activity#cn.jpush.android.ui.PopWinActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:64:9-67:61
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:66:9-69:52
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:66:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:68:13-37
 	android:theme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:67:13-49
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:69:13-49
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:65:13-62
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:67:13-62
 activity#cn.jpush.android.ui.PushActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:70:9-81:20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:72:9-83:20
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:73:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:75:13-37
 	android:configChanges
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:72:13-63
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:74:13-63
 	android:theme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:74:13-60
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:76:13-60
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:71:13-60
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:73:13-60
 intent-filter#${applicationId}+android.intent.category.DEFAULT+cn.jpush.android.ui.PushActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:75:13-80:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:77:13-82:29
 action#cn.jpush.android.ui.PushActivity
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:76:17-75
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:78:17-75
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:76:25-72
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:78:25-72
 category#android.intent.category.DEFAULT
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:78:17-76
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:80:17-76
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:78:27-73
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:80:27-73
 category#${applicationId}
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:79:17-61
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:81:17-61
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:79:27-58
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:81:27-58
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
 service#cn.jpush.android.service.DownloadService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:83:9-86:48
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:85:9-88:40
 	android:enabled
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:85:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:87:13-35
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:86:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:84:13-68
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:86:13-68
 service#cn.jpush.android.service.PushService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:91:9-101:19
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:92:9-102:19
 	android:enabled
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:93:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:94:13-35
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:94:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:92:13-64
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:93:13-64
 intent-filter#cn.jpush.android.intent.PUSH_TIME+cn.jpush.android.intent.PushService+cn.jpush.android.intent.REGISTER+cn.jpush.android.intent.REPORT
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:95:13-100:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:96:13-101:29
 action#cn.jpush.android.intent.REGISTER
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:96:17-75
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:97:17-75
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:96:25-72
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:97:25-72
 action#cn.jpush.android.intent.REPORT
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:97:17-73
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:98:17-73
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:97:25-70
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:98:25-70
 action#cn.jpush.android.intent.PushService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:98:17-78
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:99:17-78
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:98:25-75
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:99:25-75
 action#cn.jpush.android.intent.PUSH_TIME
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:99:17-76
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:100:17-76
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:99:25-73
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:100:25-73
 service#cn.jpush.android.service.DaemonService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:105:9-114:19
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:106:9-115:19
 	android:enabled
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:107:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:108:13-35
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:108:13-36
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:109:13-36
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:106:13-66
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:107:13-66
 intent-filter#${applicationId}+cn.jpush.android.intent.DaemonService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:109:13-112:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:110:13-114:29
 action#cn.jpush.android.intent.DaemonService
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:110:17-80
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:111:17-80
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:110:25-77
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:111:25-77
 receiver#cn.jpush.android.service.PushReceiver
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:117:9-137:20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:118:9-137:20
 	android:enabled
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:119:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:120:13-35
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:120:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:121:13-37
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:118:13-65
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:119:13-65
 intent-filter#${applicationId}+cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:121:13-124:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:122:13-125:29
 	android:priority
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:121:28-51
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:122:28-51
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:122:17-94
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:123:17-94
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:122:25-91
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:123:25-91
 intent-filter#android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:125:13-128:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:126:13-129:29
 action#android.intent.action.USER_PRESENT
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:126:17-77
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:127:17-77
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:126:25-74
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:127:25-74
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:127:17-79
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:128:17-79
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:127:25-76
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:128:25-76
 intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:130:13-135:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:131:13-136:29
 action#android.intent.action.PACKAGE_ADDED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:131:17-78
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:132:17-78
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:131:25-75
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:132:25-75
 action#android.intent.action.PACKAGE_REMOVED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:132:17-80
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:133:17-80
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:132:25-77
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:133:25-77
 data
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:134:17-50
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:135:17-50
 	android:scheme
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:134:23-47
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:135:23-47
 receiver#cn.jpush.android.service.AlarmReceiver
 ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:140:9-142:40
 	android:exported
@@ -392,67 +404,81 @@ ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/Andr
 	android:name
 		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:141:13-66
 meta-data#JPUSH_CHANNEL
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:143:9-145:49
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:144:9-146:49
 	android:value
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:145:13-46
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:146:13-46
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:144:13-41
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:145:13-41
 meta-data#JPUSH_APPKEY
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:147:9-149:56
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:148:9-150:56
 	android:value
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:149:13-53
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:150:13-53
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:148:13-40
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:149:13-40
 meta-data#TESTIN_APPKEY
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:150:9-152:64
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:151:9-153:64
 	android:value
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:152:13-61
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:153:13-61
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:151:13-41
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:152:13-41
 meta-data#TESTIN_CHANNEL
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:153:9-155:38
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:154:9-156:38
 	android:value
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:155:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:156:13-35
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:154:13-42
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:155:13-42
+meta-data#BUG_HD_SDK_GENERAL_KEY
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:157:9-109
+	android:value
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:157:20-68
+	android:name
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:157:69-106
 receiver#net.azstudio.groooseller.JPushReceiver
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:158:9-172:20
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:160:9-174:20
 	android:enabled
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:160:13-35
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:162:13-35
 	android:exported
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:161:13-37
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:163:13-37
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:159:13-42
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:161:13-42
 intent-filter#${applicationId}+cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK+cn.jpush.android.intent.CONNECTION+cn.jpush.android.intent.MESSAGE_RECEIVED+cn.jpush.android.intent.NOTIFICATION_OPENED+cn.jpush.android.intent.NOTIFICATION_RECEIVED+cn.jpush.android.intent.REGISTRATION+cn.jpush.android.intent.UNREGISTRATION
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:162:13-171:29
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:164:13-173:29
 action#cn.jpush.android.intent.REGISTRATION
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:163:17-79
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:165:17-79
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:163:25-76
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:165:25-76
 action#cn.jpush.android.intent.UNREGISTRATION
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:164:17-81
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:166:17-81
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:164:25-78
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:166:25-78
 action#cn.jpush.android.intent.MESSAGE_RECEIVED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:165:17-83
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:167:17-83
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:165:25-80
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:167:25-80
 action#cn.jpush.android.intent.NOTIFICATION_RECEIVED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:166:17-88
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:168:17-88
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:166:25-85
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:168:25-85
 action#cn.jpush.android.intent.NOTIFICATION_OPENED
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:167:17-86
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:169:17-86
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:167:25-83
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:169:25-83
 action#cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:168:17-91
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:170:17-91
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:168:25-88
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:170:25-88
 action#cn.jpush.android.intent.CONNECTION
-ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:169:17-77
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:171:17-77
 	android:name
-		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:169:25-74
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:171:25-74
+service#net.azstudio.groooseller.MyService
+ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:176:9-179:47
+	android:enabled
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:178:13-35
+	android:exported
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:179:13-36
+	android:name
+		ADDED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml:177:13-38
 uses-sdk
 INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [GroooSeller:library:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/library/unspecified/AndroidManifest.xml:7:5-9:41
@@ -478,6 +504,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:palette-v7:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/palette-v7/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:cardview-v7:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.jakewharton:butterknife:8.0.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.0.1/AndroidManifest.xml:5:5-43
 MERGED from [com.jakewharton.rxbinding:rxbinding:0.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding/0.4.0/AndroidManifest.xml:6:5-44
 MERGED from [io.reactivex:rxandroid:1.1.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/AndroidManifest.xml:19:5-43
 MERGED from [com.jakewharton.rxbinding:rxbinding-support-v4:0.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.jakewharton.rxbinding/rxbinding-support-v4/0.4.0/AndroidManifest.xml:6:5-44
@@ -527,7 +554,12 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:7:5-9:40
+MERGED from [im.fir:fir-sdk:1.3.7] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/im.fir/fir-sdk/1.3.7/AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.databinding:library:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.databinding:adapters:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/adapters/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.mikepenz:materialdrawer:5.2.2] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.2.2/AndroidManifest.xml:8:5-10:41
 MERGED from [com.android.support:recyclerview-v7:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
@@ -576,7 +608,6 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [com.github.afollestad.material-dialogs:core:0.8.5.9] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.github.afollestad.material-dialogs/core/0.8.5.9/AndroidManifest.xml:8:5-11:75
-MERGED from [com.jakewharton:butterknife:8.0.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.0.1/AndroidManifest.xml:5:5-43
 MERGED from [com.mikepenz:itemanimators:0.2.4] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.mikepenz/itemanimators/0.2.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.mikepenz.iconics:octicons-typeface:2.2.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.mikepenz.iconics/octicons-typeface/2.2.0/AndroidManifest.xml:23:5-25:41
 MERGED from [com.mikepenz:google-material-typeface:2.2.0.1.original] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.mikepenz/google-material-typeface/2.2.0.1.original/AndroidManifest.xml:23:5-25:41
@@ -589,6 +620,13 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Stu
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 MERGED from [io.reactivex:rxandroid:1.1.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/AndroidManifest.xml:19:5-43
+MERGED from [im.fir:fir-sdk:1.3.7] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/im.fir/fir-sdk/1.3.7/AndroidManifest.xml:6:5-8:41
+MERGED from [com.jakewharton:butterknife:8.0.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.0.1/AndroidManifest.xml:5:5-43
+MERGED from [com.android.databinding:library:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.databinding:adapters:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/adapters/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.databinding:library:1.1] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.databinding/library/1.1/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -597,15 +635,3 @@ MERGED from [io.reactivex:rxandroid:1.1.0] /home/runzii/文档/code/Studio/Grooo
 	android:minSdkVersion
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
 		INJECTED from /home/runzii/文档/code/Studio/GroooSeller/groooSeller/src/main/AndroidManifest.xml
-activity#com.qamaster.android.ui.ProblemActivity
-ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:15:9-76
-	android:name
-		ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:15:19-73
-activity#com.qamaster.android.ui.FeedbackActivity
-ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:16:9-77
-	android:name
-		ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:16:19-74
-activity#com.qamaster.android.ui.ScreenshotEditorActivity
-ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:17:9-85
-	android:name
-		ADDED from [GroooSeller:qAMasterSDK:unspecified] /home/runzii/文档/code/Studio/GroooSeller/groooSeller/build/intermediates/exploded-aar/GroooSeller/qAMasterSDK/unspecified/AndroidManifest.xml:17:19-82

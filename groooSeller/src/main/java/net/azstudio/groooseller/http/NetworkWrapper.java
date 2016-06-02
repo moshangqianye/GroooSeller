@@ -222,7 +222,7 @@ public class NetworkWrapper {
                 .observeOn(AndroidSchedulers.mainThread());
     }
 
-    public Observable<List<FoodOrder>[]> getOrder(Date start, Date end) {
+    public Observable<List<FoodOrder>> getOrder(Date start, Date end) {
         SimpleDateFormat myFmt2 = new SimpleDateFormat("yyyy-MM-dd");
         String dateStart = myFmt2.format(start);
         String dateEnd = myFmt2.format(end);
@@ -234,22 +234,6 @@ public class NetworkWrapper {
                     }
                 })
                 .map(new HttpResultFunc<>())
-                .map((Func1<List<FoodOrder>, List<FoodOrder>[]>) orders -> {
-                    Collections.sort(orders, (lhs, rhs) -> {
-                        if (lhs.getTime().equals(rhs.getTime()))
-                            return lhs.getOrder_id().compareTo(rhs.getOrder_id());
-                        else
-                            return lhs.getTime().compareTo(rhs.getTime());
-                    });
-                    List<FoodOrder> undo = new ArrayList<>(), finished = new ArrayList<>();
-                    for (FoodOrder order : orders) {
-                        int status = order.getStatus();
-                        if (status == 0 || status == 20)
-                            undo.add(order);
-                        else finished.add(order);
-                    }
-                    return new List[]{undo, finished};
-                })
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());

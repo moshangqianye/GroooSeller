@@ -1,5 +1,6 @@
 package net.azstudio.groooseller.ui.widgets.adapter;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import net.azstudio.groooseller.R;
+import net.azstudio.groooseller.databinding.ItemOrderDetailBinding;
 import net.azstudio.groooseller.model.business.FoodOrder;
 
 import java.util.List;
@@ -34,8 +36,7 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailAdapter.
     @Override
     public void onBindViewHolder(DetailHolder holder, int position) {
         FoodOrder.DetailBean bean = details.get(position);
-        holder.name.setText(bean.getName());
-        holder.count.setText(bean.getCount() + "");
+        holder.detailBinding.setDetail(bean);
     }
 
     @Override
@@ -44,14 +45,11 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailAdapter.
     }
 
     public static class DetailHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.detail_item_name)
-        TextView name;
-        @BindView(R.id.detail_item_count)
-        TextView count;
+        ItemOrderDetailBinding detailBinding;
 
         public DetailHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+            detailBinding = DataBindingUtil.bind(itemView);
         }
     }
 }

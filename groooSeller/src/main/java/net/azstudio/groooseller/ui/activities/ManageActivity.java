@@ -130,7 +130,6 @@ public class ManageActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Logs.d("onResume");
         shopInfoObservable.subscribe(shopInfo -> {
                     AppManager.setShopInfo(shopInfo);
                     applyShopInfo(shopInfo);
@@ -174,7 +173,6 @@ public class ManageActivity extends BaseActivity {
                     setInfoObservable.subscribe(s -> {
                                 Snackbar.make(name, s, Snackbar.LENGTH_SHORT).show();
                                 setEditMode(false);
-                                isCheckable = false;
                                 supportInvalidateOptionsMenu();
                             }
                             , throwable -> Snackbar.make(name, throwable.getMessage(), Snackbar.LENGTH_SHORT).show());

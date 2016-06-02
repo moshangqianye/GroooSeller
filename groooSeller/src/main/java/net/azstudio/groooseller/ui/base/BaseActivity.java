@@ -1,6 +1,8 @@
 package net.azstudio.groooseller.ui.base;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,25 +13,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-import net.azstudio.groooseller.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.jpush.android.api.JPushInterface;
-import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
+import com.runzii.lib.app.SwipeBackActivity;
+
+import net.azstudio.groooseller.R;
+import net.azstudio.groooseller.utils.Logs;
+
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by Wouldyou on 2015/6/10.
  */
-public abstract class BaseActivity extends SwipeBackActivity {
+public abstract class BaseActivity<T extends ViewDataBinding> extends SwipeBackActivity {
 
     @Nullable
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     private CompositeSubscription _compositeSubscription = new CompositeSubscription();
+
+    private T t;
 
     private static final String TAG = BaseActivity.class.getSimpleName();
 
@@ -46,8 +53,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
     protected void injectViews() {
-        ButterKnife.bind(this);
-        setupToolbar();
+
     }
 
     protected void setupToolbar() {
@@ -66,6 +72,10 @@ public abstract class BaseActivity extends SwipeBackActivity {
         return toolbar;
     }
 
+    public T getDataBinding() {
+        return t;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +83,13 @@ public abstract class BaseActivity extends SwipeBackActivity {
         setSwipeBackEnable(isEnableSwipe());
 
         if (getLayoutId() != 0) {
-            setContentView(getLayoutId());
+            t = DataBindingUtil.setContentView(this, getLayoutId());
         } else {
-            setContentView(R.layout.activity_base);
+            Logs.d("avtivity_base");
+            t = DataBindingUtil.setContentView(this, R.layout.activity_base);
         }
+        ButterKnife.bind(this);
+        setupToolbar();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             sHandler = new Handler();

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jpush-android-2.1.5">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/groooSeller/libs/jpush-android-2.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/library/libs/jpush-android-2.1.5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

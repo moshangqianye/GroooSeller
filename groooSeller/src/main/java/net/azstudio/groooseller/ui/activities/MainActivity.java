@@ -8,21 +8,21 @@ import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.google.gson.Gson;
 import com.jakewharton.rxbinding.support.v4.widget.RxSwipeRefreshLayout;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
-import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.itemanimators.AlphaCrossFadeAnimator;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -31,19 +31,23 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.mikepenz.octicons_typeface_library.Octicons;
-import com.testin.agent.TestinAgent;
+import com.runzii.lib.app.MyActions;
+import com.runzii.lib.constant.MyKeys;
 
+import net.azstudio.groooseller.MyService;
 import net.azstudio.groooseller.R;
+import net.azstudio.groooseller.databinding.ActivityMainBinding;
 import net.azstudio.groooseller.http.NetworkWrapper;
 import net.azstudio.groooseller.model.app.PushInfo;
 import net.azstudio.groooseller.model.app.ShopInfo;
 import net.azstudio.groooseller.model.business.FoodOrder;
+import net.azstudio.groooseller.model.http.UpdateInfo;
+import net.azstudio.groooseller.provider.ExtraActivityKeys;
+import net.azstudio.groooseller.provider.FragmentTags;
 import net.azstudio.groooseller.ui.base.BaseActivity;
 import net.azstudio.groooseller.ui.widgets.EmptySupportRecyclerView;
 import net.azstudio.groooseller.ui.widgets.adapter.OrderAdapter;
@@ -53,29 +57,28 @@ import net.azstudio.groooseller.utils.Logs;
 import net.azstudio.groooseller.utils.RxEvent.OrderEvent;
 import net.azstudio.groooseller.utils.RxJava.RxBus;
 import net.azstudio.groooseller.utils.RxJava.RxNetWorking;
-import net.azstudio.groooseller.utils.Toasts;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import butterknife.BindView;
 import cn.jpush.android.api.JPushInterface;
+import im.fir.sdk.FIR;
+import im.fir.sdk.VersionCheckCallback;
 import rx.Observable;
+import rx.functions.Func1;
 
 
 /*
  * 云推送Demo主Activity。
  * 代码中，注释以Push标注开头的，表示接下来的代码块是Push接口调用示例
  */
-public class MainActivity extends BaseActivity implements OnCheckedChangeListener {
-    private static final int PROFILE_LOGOUT = 100000;
-
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class MainActivity extends BaseActivity<ActivityMainBinding> implements OnCheckedChangeListener {
 
     public static final int[] backgrounds = {R.drawable.mat1,
             R.drawable.mat2, R.drawable.mat3, R.drawable.mat4};
@@ -86,13 +89,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     private Drawer result = null;
     private SwitchDrawerItem shopStatus;
 
-    @BindView(R.id.pager)
-    ViewPager pager;
-    @BindView(R.id.tabs)
-    TabLayout tabs;
-    @BindView(R.id.swipe_refresh_layout)
-    SwipeRefreshLayout refreshLayout;
-
     private List<FoodOrder> undoOrder = new ArrayList<>(), finishedOrder = new ArrayList<>();
 
     private Observable<ShopInfo> shopInfoObservable;
@@ -100,6 +96,7 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     private Observable<List<FoodOrder>[]> observableRefreshData;
 
     private OrderAdapter undo, finished;
+    private ActivityMainBinding mainBinding;
 
     @Override
     protected boolean isDisplayHomeAsUp() {
@@ -119,41 +116,77 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mainBinding = getDataBinding();
         if (AppPreferences.get().getAuthUser() == null) {
             startActivity(new Intent(this, LoginActivity.class));
             finish();
         } else {
+            FIR.checkForUpdateInFIR("487080b6240eab23c5e9b55a7712b23a", new VersionCheckCallback() {
+                @Override
+                public void onSuccess(String versionJson) {
+                    UpdateInfo info = new Gson().fromJson(versionJson, UpdateInfo.class);
+                    if (AppManager.getVersionCode() < info.getBuild())
+                        new MaterialDialog.Builder(MainActivity.this)
+                                .title("新版本更新")
+                                .content(info.getChangelog())
+                                .positiveText("安装")
+                                .negativeText("取消")
+                                .neutralText("更新")
+                                .onPositive((dialog, which) -> {
+                                    Uri uri = Uri.parse(info.getInstall_url());
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                    startActivity(intent);
+                                })
+                                .onNeutral((dialog1, which1) -> {
+                                    Uri uri = Uri.parse(info.getInstall_url());
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                    startActivity(intent);
+                                })
+                                .show();
+                }
+
+                @Override
+                public void onFail(Exception exception) {
+                    Logs.d("fir check fir.im fail! " + "\n" + exception.getMessage());
+                }
+
+                @Override
+                public void onStart() {
+                    Logs.d("正在获取");
+                }
+
+                @Override
+                public void onFinish() {
+                    Logs.d("正在获取");
+                }
+            });
             NetworkWrapper.get()
                     .setPushInfo(new PushInfo(JPushInterface.getRegistrationID(this)))
                     .subscribe(s -> {
-                                Logs.d(s);
-                            }, throwable ->
-                                    Snackbar.make(pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show()
+                            }
+                            , throwable ->
+                                    Snackbar.make(mainBinding.pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show()
                     );
-            TestinAgent.setUserInfo(AppManager.getShopInfo().getName());
+//            Logs.d(JPushInterface.getRegistrationID(this));
             setUpDrawer(savedInstanceState);
             registerMessageReceiver();
             setUpPager();
-            Calendar calendar = Calendar.getInstance();
-            calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
-            observableRefreshData = NetworkWrapper.get()
-                    .getOrder(new Date(), calendar.getTime())
-                    .compose(RxNetWorking.bindRefreshing(refreshLayout));
             shopInfoObservable = NetworkWrapper.get().getShopInfo(AppManager.getShopInfo().getId());
-            refreshLayout.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimaryLight, R.color.colorPrimary);
-            RxSwipeRefreshLayout.refreshes(refreshLayout)
+            mainBinding.swipeRefreshLayout.setColorSchemeResources(R.color.colorAccent, R.color.colorPrimaryLight, R.color.colorPrimary);
+            RxSwipeRefreshLayout.refreshes(mainBinding.swipeRefreshLayout)
                     .doOnUnsubscribe(() -> {
-                        refreshLayout.setRefreshing(false);
+                        mainBinding.swipeRefreshLayout.setRefreshing(false);
                     })
                     .compose(bindToLifecycle())
                     .subscribe(aVoid -> {
                         refreshData();
                     });
-            addSubscription(RxBus.getDefault().toObserverable(OrderEvent.class).subscribe(orderEvent -> {
-                finishedOrder.add(0, orderEvent.getOrder());
-                finished.notifyDataSetChanged();
-            }));
+            RxBus.getDefault().toObserverable(OrderEvent.class)
+                    .compose(bindToLifecycle())
+                    .subscribe(orderEvent -> {
+                        finishedOrder.add(0, orderEvent.getOrder());
+                        finished.notifyDataSetChanged();
+                    });
         }
 
     }
@@ -162,6 +195,7 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     protected void onResume() {
         isForeground = true;
         refreshData();
+        sendBroadcast(new Intent(MyActions.ACTION_PAUSE));
         super.onResume();
     }
 
@@ -172,8 +206,30 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     }
 
     private void refreshData() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
+        observableRefreshData = NetworkWrapper.get()
+                .getOrder(new Date(), calendar.getTime())
+                .map((Func1<List<FoodOrder>, List<FoodOrder>[]>) orders -> {
+                    Collections.sort(orders, (lhs, rhs) -> {
+                        if (lhs.getTime().equals(rhs.getTime()))
+                            return lhs.getOrder_id().compareTo(rhs.getOrder_id());
+                        else
+                            return lhs.getTime().compareTo(rhs.getTime());
+                    });
+                    List<FoodOrder> undo = new ArrayList<>(), finished = new ArrayList<>();
+                    for (FoodOrder order : orders) {
+                        int status = order.getStatus();
+                        if (status == 0 || status == 20)
+                            undo.add(order);
+                        else finished.add(order);
+                    }
+                    return new List[]{undo, finished};
+                })
+                .compose(RxNetWorking.bindRefreshing(mainBinding.swipeRefreshLayout))
+                .compose(bindToLifecycle());
         observableRefreshData.subscribe(menus -> notifyDataSetChanged(menus)
-                , throwable -> Snackbar.make(pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show());
+                , throwable -> Snackbar.make(mainBinding.pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show());
         shopInfoObservable.subscribe(shopInfo -> {
             AppPreferences.get().setShopInfo(shopInfo);
             AppManager.setShopInfo(shopInfo);
@@ -181,9 +237,19 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
             headerResult.getActiveProfile().withName(shopInfo.getName());
             headerResult.getActiveProfile().withIcon(shopInfo.getLogo());
             headerResult.updateProfile(profile);
-            shopStatus.withName("营业状态:" + (shopInfo.getStatus() == 1 ? "开" : "关"));
+            boolean status = shopInfo.getStatus() == 1;
+            setIntentService(status);
+            shopStatus.withName("营业状态:" + (status ? "开" : "关"));
+            shopStatus.withChecked(status);
             result.updateItem(shopStatus);
-        }, throwable -> Snackbar.make(pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show());
+        }, throwable -> Snackbar.make(mainBinding.pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show());
+    }
+
+    private void setIntentService(boolean action) {
+        if (action)
+            startService(new Intent(this, MyService.class));
+        else
+            stopService(new Intent(this, MyService.class));
     }
 
     private void notifyDataSetChanged(List<FoodOrder>[] orders) {
@@ -198,7 +264,7 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     private void setUpPager() {
         undo = new OrderAdapter(undoOrder);
         finished = new OrderAdapter(finishedOrder);
-        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        mainBinding.pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -211,10 +277,10 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                refreshLayout.setEnabled(state == ViewPager.SCROLL_STATE_IDLE);
+                mainBinding.swipeRefreshLayout.setEnabled(state == ViewPager.SCROLL_STATE_IDLE);
             }
         });
-        pager.setAdapter(new PagerAdapter() {
+        mainBinding.pager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
                 return 2;
@@ -247,7 +313,14 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
                 else return "已处理";
             }
         });
-        tabs.setupWithViewPager(pager);
+        mainBinding.tabs.setupWithViewPager(mainBinding.pager);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mMessageReceiver != null)
+            unregisterReceiver(mMessageReceiver);
+        super.onDestroy();
     }
 
     private void setUpDrawer(Bundle savedInstanceState) {
@@ -264,20 +337,8 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
                 .withTranslucentStatusBar(true)
                 .withHeaderBackground(backgrounds[new Random().nextInt(backgrounds.length)])
                 .addProfiles(
-                        profile,
-                        new ProfileSettingDrawerItem().withName("退出登录").withDescription("清楚用户信息").withIcon(new IconicsDrawable(this, GoogleMaterial.Icon.gmd_lock_outline).actionBar().colorRes(R.color.material_drawer_primary_text)).withIdentifier(PROFILE_LOGOUT)
+                        profile
                 )
-                .withOnAccountHeaderListener((view, profile1, current) -> {
-                    //sample usage of the onProfileChanged listener
-                    //if the clicked item has the identifier 1 add a new profile ;)
-                    if (profile1 instanceof IDrawerItem && profile1.getIdentifier() == PROFILE_LOGOUT) {
-                        AppPreferences.get().clearAll();
-                        finish();
-                    }
-
-                    //false if you have not consumed the event and it should close the drawer
-                    return false;
-                })
                 .withSavedInstance(savedInstanceState)
                 .build();
 
@@ -296,7 +357,7 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
                         new PrimaryDrawerItem().withName(R.string.activitylabel_allorder).withTextColorRes(R.color.material_drawer_primary_text).withIcon(GoogleMaterial.Icon.gmd_done_all).withIdentifier(5).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.activitylabel_exit).withTextColorRes(R.color.material_drawer_primary_text).withIcon(GoogleMaterial.Icon.gmd_assignment_return).withIdentifier(6).withSelectable(false)
                 ).addStickyDrawerItems(
-                        new SecondaryDrawerItem().withName(R.string.activitylabel_aboutus).withTextColorRes(R.color.material_drawer_primary_text).withIcon(GoogleMaterial.Icon.gmd_extension).withIdentifier(7).withSelectable(false)
+                        new PrimaryDrawerItem().withName(R.string.activitylabel_aboutus).withTextColorRes(R.color.material_drawer_primary_text).withIcon(GoogleMaterial.Icon.gmd_extension).withIdentifier(7).withSelectable(false)
                 )
                 .withOnDrawerItemClickListener((view, position, drawerItem) -> {
                     //check if the drawerItem is set.
@@ -315,6 +376,15 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
                                 intent = new Intent(MainActivity.this, MenuActivity.class);
                                 break;
                             case 5:
+                                intent = new Intent(MainActivity.this, OrderActivity.class);
+                                break;
+                            case 6:
+                                AppPreferences.get().clearAll();
+                                finish();
+                                break;
+                            case 7:
+                                intent = new Intent(MainActivity.this, SingleFragmentActivity.class);
+                                intent.putExtra(ExtraActivityKeys.FRAGMENT.toString(), FragmentTags.ABOUT_US);
                                 break;
                         }
                         if (intent != null) {
@@ -394,23 +464,20 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
                             MainActivity.this.shopStatus.withName("营业状态:" + (isChecked ? "开" : "关"));
                             AppManager.getShopInfo().setStatus(isChecked ? 1 : 0);
                             result.updateItem(MainActivity.this.shopStatus);
-                        }, throwable -> Snackbar.make(pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show()));
+                            setIntentService(isChecked);
+                        }, throwable -> Snackbar.make(mainBinding.pager, throwable.getMessage(), Snackbar.LENGTH_SHORT).show()));
                 break;
         }
     }
 
     //for receive customer msg from jpush server
     private MessageReceiver mMessageReceiver;
-    public static final String MESSAGE_RECEIVED_ACTION = "com.example.jpushdemo.MESSAGE_RECEIVED_ACTION";
-    public static final String KEY_TITLE = "title";
-    public static final String KEY_MESSAGE = "message";
-    public static final String KEY_EXTRAS = "extras";
 
     public void registerMessageReceiver() {
         mMessageReceiver = new MessageReceiver();
         IntentFilter filter = new IntentFilter();
         filter.setPriority(IntentFilter.SYSTEM_HIGH_PRIORITY);
-        filter.addAction(MESSAGE_RECEIVED_ACTION);
+        filter.addAction(MyActions.MESSAGE_RECEIVED_ACTION);
         registerReceiver(mMessageReceiver, filter);
     }
 
@@ -418,12 +485,12 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
-                String messge = intent.getStringExtra(KEY_MESSAGE);
-                String extras = intent.getStringExtra(KEY_EXTRAS);
+            if (MyActions.MESSAGE_RECEIVED_ACTION.equals(intent.getAction())) {
+                String messge = intent.getStringExtra(MyKeys.KEY_MESSAGE);
+                String extras = intent.getStringExtra(MyKeys.KEY_EXTRAS);
                 StringBuilder showMsg = new StringBuilder();
-                showMsg.append(KEY_MESSAGE + " : " + messge + "\n");
-                showMsg.append(KEY_EXTRAS + " : " + extras + "\n");
+                showMsg.append(MyKeys.KEY_MESSAGE + " : " + messge + "\n");
+                showMsg.append(MyKeys.KEY_EXTRAS + " : " + extras + "\n");
                 setCostomMsg(showMsg.toString());
             }
         }
@@ -431,6 +498,6 @@ public class MainActivity extends BaseActivity implements OnCheckedChangeListene
     }
 
     private void setCostomMsg(String msg) {
-        Snackbar.make(pager, msg, Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(mainBinding.pager, "你有新订单", Snackbar.LENGTH_SHORT).show();
     }
 }

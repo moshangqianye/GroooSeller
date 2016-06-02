@@ -53,7 +53,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderHolder>
         holder.remark.setVisibility(order.getRemark() == null ? View.GONE : View.VISIBLE);
         holder.remark.setText(order.getRemark() == null ? "" : order.getRemark());
         holder.time.setText(order.getTime());
-        holder.price.setText("" + order.getPrice());
+        holder.price.setText(order.getPrice());
         holder.status.setText(OrderStatus.getStatus(order.getStatus()));
         holder.detail.setAdapter(new OrderDetailAdapter(order.getDetail()));
         holder.confirm.setVisibility((order.getStatus() == 0 || order.getStatus() == 20) ? View.VISIBLE : View.GONE);
@@ -87,16 +87,16 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderHolder>
             orders.remove(order);
             notifyItemRemoved(position);
         });
-//        RxView.clicks(holder.cancel).debounce(1000, TimeUnit.MILLISECONDS).flatMap(aVoid -> {
-//            FoodOrder tempOrder = order.clone();
-//            tempOrder.setStatus(22);
-//            return NetworkWrapper.get().editOrder(tempOrder);
-//        }).subscribe(body -> {
-//            order.setStatus(22);
-//            RxBus.getDefault().post(new OrderEvent(order));
-//            orders.remove(order);
-//            notifyItemRemoved(position);
-//        });
+        RxView.clicks(holder.cancel).debounce(1000, TimeUnit.MILLISECONDS).flatMap(aVoid -> {
+            FoodOrder tempOrder = order.clone();
+            tempOrder.setStatus(22);
+            return NetworkWrapper.get().editOrder(tempOrder);
+        }).subscribe(body -> {
+            order.setStatus(22);
+            RxBus.getDefault().post(new OrderEvent(order));
+            orders.remove(order);
+            notifyItemRemoved(position);
+        });
         RxView.clicks(holder.dial).debounce(1000, TimeUnit.MILLISECONDS)
                 .subscribe(aVoid -> {
                     Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + order.getUsername()));

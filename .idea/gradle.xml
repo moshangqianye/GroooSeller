@@ -12,7 +12,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/groooSeller" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/qAMasterSDK" />
           </set>
         </option>
         <option name="myModules">
@@ -20,7 +19,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/groooSeller" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/qAMasterSDK" />
           </set>
         </option>
       </GradleProjectSettings>

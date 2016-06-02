@@ -47,6 +47,9 @@ public class SingleFragmentActivity extends BaseActivity {
     private Fragment createFragment() {
         Fragment fragment = null;
         switch ((FragmentTags) getIntent().getSerializableExtra(ExtraActivityKeys.FRAGMENT.toString())) {
+            case ABOUT_US:
+                fragment = new AboutUsFragment();
+                break;
             default:
                 fragment = new AboutUsFragment();
                 break;

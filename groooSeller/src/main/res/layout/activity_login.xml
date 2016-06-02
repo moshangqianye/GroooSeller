@@ -36,7 +36,6 @@
                 android:background="@color/transparent"
                 android:hint="请输入用户名"
                 android:paddingLeft="15dp"
-                android:text="test1"
                 android:textColor="@color/textColorPrimary"
                 android:textColorHint="#ffdddddd" />
 
@@ -53,7 +52,6 @@
                 android:hint="请输入密码"
                 android:inputType="textPassword"
                 android:paddingLeft="15dp"
-                android:text="test3"
                 android:textColor="@color/textColorPrimary"
                 android:textColorHint="#ffdddddd" />
         </LinearLayout>
@@ -97,7 +95,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/btn_register"
+                android:id="@+id/tv_dial"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_marginLeft="5dp"

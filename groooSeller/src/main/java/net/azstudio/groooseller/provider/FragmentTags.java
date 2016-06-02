@@ -6,6 +6,6 @@ package net.azstudio.groooseller.provider;
  */
 public enum FragmentTags {
 
-    MENU_MANAGE,FOOD_EDIT;
+    MENU_MANAGE,ABOUT_US;
 
 }

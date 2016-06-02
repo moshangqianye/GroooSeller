@@ -114,12 +114,13 @@ public class MenuActivity extends BaseActivity {
     }
 
     private void setUpSubscriber() {
-        addSubscription(RxBus.getDefault().toObserverable(CategoryClickEvent.class)
+        RxBus.getDefault().toObserverable(CategoryClickEvent.class)
+                .compose(bindToLifecycle())
                 .subscribe(userEvent -> {
                     currCategory = userEvent.getPosition();
                     viewPager.setCurrentItem(1, true);
                     foodAdapter.setFoods(userEvent.getFoods());
-                }));
+                });
     }
 
     @Override

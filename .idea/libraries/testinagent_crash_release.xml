@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="testinagent_crash_release">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/qAMasterSDK/libs/testinagent_crash_release.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

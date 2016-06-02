@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.grooo.seller.grooo_seller"
-    android:versionCode="14"
-    android:versionName="4.0.0" >
+    android:versionCode="16"
+    android:versionName="4.0.7" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -39,6 +39,8 @@
         android:allowBackup="true"
         android:icon="@drawable/push"
         android:label="@string/app_name"
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23"
         android:theme="@style/AppTheme" >
         <activity
             android:name="net.azstudio.groooseller.ui.activities.LoginActivity"
@@ -63,8 +65,10 @@
         <activity android:name="net.azstudio.groooseller.ui.activities.SingleFragmentActivity" />
         <activity
             android:name="net.azstudio.groooseller.ui.activities.ManageActivity"
-            android:label="@string/activitylabel_shopmanage" >
-        </activity>
+            android:label="@string/activitylabel_shopmanage" />
+        <activity
+            android:name="net.azstudio.groooseller.ui.activities.OrderActivity"
+            android:label="@string/activitylabel_allorder" />
 
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
@@ -158,6 +162,9 @@
         <meta-data
             android:name="TESTIN_CHANNEL"
             android:value="zijide" />
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="67754e37d16dca94c9394ffa1c227f60" />
 
         <!-- User defined.  For test only  用户自定义的广播接收器 -->
         <receiver
@@ -176,9 +183,10 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.qamaster.android.ui.ProblemActivity" />
-        <activity android:name="com.qamaster.android.ui.FeedbackActivity" />
-        <activity android:name="com.qamaster.android.ui.ScreenshotEditorActivity" />
+        <service
+            android:name="net.azstudio.groooseller.MyService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

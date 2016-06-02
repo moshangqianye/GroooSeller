@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -62,6 +63,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         attemptLogin();
     }
 
+    @OnClick(R.id.tv_dial)
+    public void contactUs() {
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:18716036890"));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     private void attemptLogin() {
         // Reset errors.
         username.setError(null);
@@ -84,7 +92,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         if (TextUtils.isEmpty(phone)) {
             Snackbar.make(username, R.string.error_field_required, Snackbar.LENGTH_SHORT).show();
             focusView = username;
-            cancel = true;}
+            cancel = true;
+        }
 //        } else if (!isPhoneValid(phone)) {
 //            Snackbar.make(username, R.string.error_invalid_phone, Snackbar.LENGTH_SHORT).show();
 //            focusView = username;

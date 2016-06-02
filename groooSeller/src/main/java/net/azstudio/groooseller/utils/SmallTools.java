@@ -1,6 +1,8 @@
 package net.azstudio.groooseller.utils;
 
 
+import android.net.Uri;
+
 import net.azstudio.groooseller.model.business.Menu;
 import net.azstudio.groooseller.model.http.HttpFood;
 
@@ -59,13 +61,13 @@ public class SmallTools {
         }
     }
 
-    public static String resourceIdToUri(int id) {
-        return "android.resource://" + AppManager.getAppContext().getPackageName() + "/" + id;
+    public static Uri resourceIdToUri(int id) {
+        return Uri.parse("android.resource://" + AppManager.getAppContext().getPackageName() + "/" + id);
     }
 
     private static final SimpleDateFormat format = new SimpleDateFormat("MM-dd HH:mm");
 
-    public static String formatDate(Date date){
+    public static String formatDate(Date date) {
         return format.format(date);
     }
 

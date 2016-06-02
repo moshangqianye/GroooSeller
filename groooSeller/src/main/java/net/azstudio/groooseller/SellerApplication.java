@@ -1,7 +1,6 @@
 package net.azstudio.groooseller;
 
 
-import android.app.Application;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -12,23 +11,16 @@ import com.mikepenz.iconics.IconicsDrawable;
 import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
-import com.testin.agent.TestinAgent;
+import com.runzii.lib.MyApplication;
 
 import net.azstudio.groooseller.utils.AppManager;
 
-import cn.jpush.android.api.JPushInterface;
-
-public class SellerApplication extends Application {
+public class SellerApplication extends MyApplication {
 
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        JPushInterface.setDebugMode(true);
-        JPushInterface.init(this);
-        TestinAgent.init(this);
-
         AppManager.init(this);
 
         DrawerImageLoader.init(new AbstractDrawerImageLoader() {
@@ -61,6 +53,7 @@ public class SellerApplication extends Application {
                 return super.placeholder(ctx, tag);
             }
         });
+
     }
 
 }

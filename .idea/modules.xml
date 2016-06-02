@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/GroooSeller.iml" filepath="$PROJECT_DIR$/GroooSeller.iml" />
       <module fileurl="file://$PROJECT_DIR$/groooSeller/groooSeller.iml" filepath="$PROJECT_DIR$/groooSeller/groooSeller.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qAMasterSDK/qAMasterSDK.iml" filepath="$PROJECT_DIR$/qAMasterSDK/qAMasterSDK.iml" />
     </modules>
   </component>
 </project>

@@ -6,17 +6,14 @@ import cn.jpush.android.api.JPushInterface;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.runzii.lib.app.MyActions;
+import com.runzii.lib.constant.MyKeys;
 
 import net.azstudio.groooseller.ui.activities.MainActivity;
-import net.azstudio.groooseller.utils.Logs;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,7 +33,6 @@ public class JPushReceiver extends BroadcastReceiver {
         if (JPushInterface.ACTION_REGISTRATION_ID.equals(intent.getAction())) {
             String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
             Log.d(TAG, "[MyReceiver] 接收Registration Id : " + regId);
-            Logs.d(""+regId);
             //send the Registration Id to your server...
 
         } else if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
@@ -106,24 +102,25 @@ public class JPushReceiver extends BroadcastReceiver {
 
     //send msg to MainActivity
     private void processCustomMessage(Context context, Bundle bundle) {
-        if (MainActivity.isForeground) {
-            String message = bundle.getString(JPushInterface.EXTRA_MESSAGE);
-            String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
-            Intent msgIntent = new Intent(MainActivity.MESSAGE_RECEIVED_ACTION);
-            msgIntent.putExtra(MainActivity.KEY_MESSAGE, message);
-            if (!TextUtils.isEmpty(extras.trim())) {
-                try {
-                    JSONObject extraJson = new JSONObject(extras);
-                    if (null != extraJson && extraJson.length() > 0) {
-                        msgIntent.putExtra(MainActivity.KEY_EXTRAS, extras);
-                    }
-                } catch (JSONException e) {
 
+        if (bundle.getString(JPushInterface.EXTRA_MESSAGE).equals("play"))
+            context.sendBroadcast(new Intent(MyActions.ACTION_PLAY));
+        String message = bundle.getString(JPushInterface.EXTRA_MESSAGE);
+        String extras = bundle.getString(JPushInterface.EXTRA_EXTRA);
+        Intent msgIntent = new Intent(MyActions.MESSAGE_RECEIVED_ACTION);
+        msgIntent.putExtra(MyKeys.KEY_MESSAGE, message);
+        if (!TextUtils.isEmpty(extras.trim())) {
+            try {
+                JSONObject extraJson = new JSONObject(extras);
+                if (null != extraJson && extraJson.length() > 0) {
+                    msgIntent.putExtra(MyKeys.KEY_EXTRAS, extras);
                 }
+            } catch (JSONException e) {
 
             }
-            context.sendBroadcast(msgIntent);
+
         }
+        context.sendBroadcast(msgIntent);
     }
 
 }

@@ -53,7 +53,7 @@ public class ShopInfo {
     }
 
     public String getLogo() {
-        return logo;
+        return logo == null ? "" : logo;
     }
 
     public void setLogo(String logo) {
