@@ -11,7 +11,7 @@
  1. 采用Material Design
  2. 采用极光推送sdk
  3. 主要第三方库
-  -  material-dialogs
+  - material-dialogs
   - glide
   - retrofit
   - rxjava

@@ -272,8 +272,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41158536">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5945122">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -4623,7 +4623,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464888315541</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修复了README">
+      <created>1464888547544</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1464888547544</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4689,7 +4695,8 @@
     <MESSAGE value="seller第一次commit" />
     <MESSAGE value="基本完成了" />
     <MESSAGE value="完善了README" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善了README" />
+    <MESSAGE value="修复了README" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复了README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5084,8 +5091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41158536">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5945122">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
