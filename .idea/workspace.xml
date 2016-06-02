@@ -105,94 +105,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f50027b7-b996-4767-88ba-eb092b5832d4" name="Default" comment="基本完成了">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-hdpi/ic_navigate_before_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-hdpi/ic_navigate_next_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-mdpi/ic_navigate_before_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-mdpi/ic_navigate_next_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xhdpi/ic_navigate_before_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xhdpi/ic_navigate_next_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xxhdpi/ic_navigate_before_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xxhdpi/ic_navigate_next_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xxxhdpi/ic_navigate_before_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/drawable-xxxhdpi/ic_navigate_next_white_24dp.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/adapters_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/baseLibrary_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/compiler_2_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/fir_sdk_1_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/juniversalchardet_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/library_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/MyService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/app/ObservableCalendar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/http/UpdateInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/OrderActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/widgets/adapter/SimpleOrderAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_ordercenter.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/item_order_simple_content.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/item_viewpager_ordermanage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/menu/order_menu.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/runzii/lib/MyApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/runzii/lib/constant/MyKeys.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/res/drawable-xhdpi/toolbar_dropshadow.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/testinagent_crash_release.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/jniLibs/armeabi-v7a/libjpush174.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/jniLibs/armeabi/libjpush174.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/list.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/menumanage_linear.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/order_linear.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/progress_bar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/rename_food.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/row.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/toolbar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qAMasterSDK/qAMasterSDK.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/arm64-v8a/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/arm64-v8a/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/armeabi-v7a/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/armeabi-v7a/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/armeabi/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/armeabi/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/jpush-android-2.1.5.jar" afterPath="$PROJECT_DIR$/library/libs/jpush-android-2.1.5.jar" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/mips/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/mips/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/mips64/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/mips64/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/x86/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/x86/libjpush215.so" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/groooSeller/libs/x86_64/libjpush215.so" afterPath="$PROJECT_DIR$/library/libs/x86_64/libjpush215.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/intermediates/classes/debug/android/support/v7/cardview/R$dimen.class" afterPath="$PROJECT_DIR$/groooSeller/build/intermediates/classes/debug/android/support/v7/cardview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/butterknife_8_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/butterknife_8_0_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/jpush_android_2_1_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/jpush_android_2_1_5.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="f50027b7-b996-4767-88ba-eb092b5832d4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroooSeller.iml" afterPath="$PROJECT_DIR$/GroooSeller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build.gradle" afterPath="$PROJECT_DIR$/groooSeller/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/generated/source/buildConfig/androidTest/debug/cn/grooo/seller/grooo_seller/test/BuildConfig.java" afterPath="$PROJECT_DIR$/groooSeller/build/generated/source/buildConfig/androidTest/debug/cn/grooo/seller/grooo_seller/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/generated/source/r/debug/android/support/v7/cardview/R.java" afterPath="$PROJECT_DIR$/groooSeller/build/generated/source/r/debug/android/support/v7/cardview/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/groooSeller/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/groooSeller/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/groooSeller/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/groooSeller.iml" afterPath="$PROJECT_DIR$/groooSeller/groooSeller.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/JPushReceiver.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/JPushReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/SellerApplication.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/SellerApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/http/NetworkWrapper.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/http/NetworkWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/app/ShopInfo.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/app/ShopInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/business/FoodOrder.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/model/business/FoodOrder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/provider/FragmentTags.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/provider/FragmentTags.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/LoginActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/MainActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/ManageActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/ManageActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/MenuActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/MenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/SingleFragmentActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/activities/SingleFragmentActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/base/BaseActivity.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/base/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/fragments/AboutUsFragment.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/fragments/AboutUsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/widgets/adapter/OrderAdapter.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/widgets/adapter/OrderAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/widgets/adapter/OrderDetailAdapter.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/ui/widgets/adapter/OrderDetailAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/utils/SmallTools.java" afterPath="$PROJECT_DIR$/groooSeller/src/main/java/net/azstudio/groooseller/utils/SmallTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_base.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_base.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/layout/item_order_detail.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/layout/item_order_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/groooSeller/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/groooSeller/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
     </list>
     <ignored path="GroooSeller.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -347,8 +261,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/groooSeller/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57865167">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2724719">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -4650,7 +4564,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464557353035</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="基本完成了">
+      <created>1464879852354</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1464879852354</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4664,7 +4584,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6497462" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.45612708" order="13" side_tool="false" content_ui="tabs" />
@@ -4675,7 +4595,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26395938" sideWeight="0.47579426" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46192893" sideWeight="0.48638427" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48392555" sideWeight="0.48487142" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34856176" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34856176" sideWeight="0.4969743" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -5108,8 +5028,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/groooSeller/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57865167">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2724719">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
