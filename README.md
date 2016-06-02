@@ -11,11 +11,11 @@
  1. 采用Material Design
  2. 采用极光推送sdk
  3. 主要第三方库
- -  material-dialogs
- - glide
- - retrofit
- - rxjava
- - butterknife
+  -  material-dialogs
+  - glide
+  - retrofit
+  - rxjava
+  - butterknife
 
  4. 主要设计结构
   - MVVM(databinding)
@@ -23,4 +23,4 @@
 
 ## 截图
 
-<img src="http://img.blog.csdn.net/20160603012347722" width=200> <img src="http://img.blog.csdn.net/20160603010148029" width=200> <img src="http://img.blog.csdn.net/20160603010538823" width=200> <img src="http://img.blog.csdn.net/20160603011648051" width=200> <img src="http://img.blog.csdn.net/20160603011815317" width=200> <img src="http://img.blog.csdn.net/20160603011842864" width=200>
+ <img src="http://img.blog.csdn.net/20160603012347722" width=200> <img src="http://img.blog.csdn.net/20160603010148029" width=200> <img src="http://img.blog.csdn.net/20160603010538823" width=200> <img src="http://img.blog.csdn.net/20160603011648051" width=200> <img src="http://img.blog.csdn.net/20160603011815317" width=200> <img src="http://img.blog.csdn.net/20160603011842864" width=200>
