@@ -261,13 +261,14 @@ public class NetworkWrapper {
         @Override
         public Observable<HttpResult<T>> call(Throwable throwable) {
             if (isHttp401Error(throwable)) {
+                Logs.d(throwable.getMessage());
                 return apiService.getAuthToken(AppPreferences.get().getAuthUser()).flatMap(authTokenHttpResult -> {
                     String auth = authTokenHttpResult.getData().getToken();
                     AppPreferences.get().setAuth(auth);
                     return getObservable(auth);
                 });
             }
-            return Observable.error(throwable);
+            return Observable.error(new Throwable("请重新登录"));
         }
 
         protected abstract Observable<HttpResult<T>> getObservable(String finalToken);
@@ -275,7 +276,7 @@ public class NetworkWrapper {
 
 
     private boolean isHttp401Error(Throwable throwable) {
-        return "HTTP 401 UNAUTHORIZED".equals(throwable.getMessage()) ? true : false;
+        return "HTTP 401 Unauthorized".equals(throwable.getMessage()) ? true : false;
     }
 
     //在访问HttpMethods时创建单例
