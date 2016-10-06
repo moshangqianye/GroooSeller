@@ -74,14 +74,9 @@ import rx.Observable;
 import rx.functions.Func1;
 
 
-/*
- * 云推送Demo主Activity。
- * 代码中，注释以Push标注开头的，表示接下来的代码块是Push接口调用示例
- */
 public class MainActivity extends BaseActivity<ActivityMainBinding> implements OnCheckedChangeListener {
 
-    public static final int[] backgrounds = {R.drawable.mat1,
-            R.drawable.mat2, R.drawable.mat3, R.drawable.mat4};
+    public static final int[] backgrounds = {R.drawable.mat1, R.drawable.mat4};
     public static boolean isForeground = false;
     private AccountHeader headerResult = null;
 

@@ -7,4 +7,5 @@ package com.runzii.lib.app;
 public class MyActions {
     public static final String ACTION_PLAY = "1";
     public static final String ACTION_PAUSE = "2";
+    public static final String MESSAGE_RECEIVED_ACTION = "3";
 }

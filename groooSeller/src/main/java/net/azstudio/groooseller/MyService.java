@@ -96,9 +96,6 @@ public class MyService extends Service {
         }
     }
 
-
-    
-
     public class MyReceiver extends BroadcastReceiver {
 
         @Override
